@@ -1,0 +1,93 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Seletrores #2</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      div:nth-child(even) {
+        background-color: rebeccapurple;
+      }
+      div:nth-child(odd) {
+        background-color: plum;
+      }
+      div:hover {
+        background-color: purple;
+      }
+      input:focus {
+        outline: none;
+        border: 2px solid greenyellow;
+        border-radius: 2px;
+      }
+      li:first-child {
+        background-color: green;
+      }
+      li:last-child {
+        background-color: red;
+      }
+      p::first-letter {
+        font-size: 50px;
+      }
+      p::first-line {
+        font-weight: bold;
+      }
+      input::placeholder {
+        color: #888;
+        font-style: italic;
+        opacity: 1;
+      }
+      .box {
+        position: relative;
+        padding: 20px;
+        background-color: #f4f4f4;
+        border: 1px solid #ddd;
+        font-size: 18px;
+        text-align: center;
+      }
+      .box::before {
+        content: "Antes: ";
+        color: red;
+        font-weight: bold;
+      }
+      .box::after {
+        content: "Depois";
+        color: blue;
+        font-weight: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Seletores de Pseudo-classes</h2>
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <input type="text" />
+
+    <ul>
+      <li>Primeiro item</li>
+      <li>Segundo item</li>
+      <li>Terceiro item</li>
+      <li>Último item</li>
+    </ul>
+
+    <h2>Seletores de Pseudo-elementos</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sequi id
+      ratione quia quisquam ad illo doloribus dolorum voluptates ullam earum
+      excepturi fuga molestias eos, sed vitae vero repudiandae possimus.
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias sequi id
+      ratione quia quisquam ad illo doloribus dolorum voluptates ullam earum
+      excepturi fuga molestias eos, sed vitae vero repudiandae possimus.
+    </p>
+    <form>
+      <label for="nome">Digite seu nome:</label>
+      <input type="text" id="nome" placeholder="Seu nome aqui" />
+    </form>
+
+    <div class="box">Conteúdo principal</div>
+  </body>
+</html>

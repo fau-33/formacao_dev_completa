@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Seletrores #1</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      section,
+      span,
+      p {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: crimson;
+        margin: 10px;
+        font-size: 40px;
+        text-align: center;
+      }
+      .circulo {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        border-radius: 25px;
+        background-color: blueviolet;
+        text-align: center;
+        font-size: 40px;
+      }
+      .destaque {
+        border: 4px solid yellow;
+        color: yellow;
+        border-radius: 29px;
+      }
+      #botao-compra {
+        height: 30px;
+        width: 120px;
+        background-color: forestgreen;
+        color: white;
+        border: 1px solid white;
+        border-radius: 15px;
+        text-transform: uppercase;
+      }
+      [href],
+      [deveSumir] {
+        display: none;
+      }
+      * {
+        border: 2px solid yellowgreen;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Seletores de elemento</h2>
+    <section>1</section>
+    <span>2</span>
+    <p>3</p>
+
+    <h2>Seletores de classe</h2>
+    <div class="circulo">4</div>
+    <div class="circulo destaque">5</div>
+
+    <h2>Seletores de ID</h2>
+    <button id="botao-compra">Comprar</button>
+
+    <h2>Seletores de atributo</h2>
+    <a href="http://www.google.com">google</a>
+    <div deveSumir>Esconder #1</div>
+    <main deveSumir>Esconder #2</main>
+
+    <h2>Seletor Universal</h2>
+    <label>Será aplicado em todos os elementos da página</label>
+  </body>
+</html>
