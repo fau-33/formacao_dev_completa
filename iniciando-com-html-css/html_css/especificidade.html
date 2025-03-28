@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Especificidade CSS</title>
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      .caixa {
+        width: 100px;
+        height: 100px;
+        background-color: coral !important;
+      }
+      div.azul {
+        background-color: cornflowerblue;
+      }
+      #unico {
+        background: linear-gradient(to right, red, blue);
+      }
+      .advertencia {
+        background-color: goldenrod;
+        padding: 5px;
+      }
+      .importante {
+        background-color: crimson;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>1) Regra do !important</h2>
+    <div class="caixa azul">Cuidado com !important</div>
+
+    <h2>2) Regra do seletor mais espicifico</h2>
+    <div id="unico" class="advertencia">Quem vai ganhar?</div>
+
+    <h2>3) A última regra aplicada</h2>
+    <div class="advertencia importante">Essa informação é sigilosa</div>
+  </body>
+</html>

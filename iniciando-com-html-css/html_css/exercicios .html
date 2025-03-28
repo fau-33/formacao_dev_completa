@@ -1,44 +1,124 @@
-<h1>Exercícios HTML & CSS</h1>
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <title>Exercícios HTML & CSS</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Oswald", sans-serif;
+        background-color: black;
+        color: white;
+        width: 800px;
+        margin: 0 auto;
+      }
+      h1 {
+        background-color: gray;
+        font-weight: bold;
+        text-align: center;
+        border-bottom: 3px solid lightblue;
+        padding: 10px;
+        margin: 0;
+      }
 
-<ul>
-  <li>
-    <a href="./html_css_basico_1.html">Integração HTML + CSS #1</a>
-  </li>
-  <li>
-    <a href="./html_css_basico_2.html">Integração HTML + CSS #2</a>
-  </li>
-  <li>
-    <a href="./html_css_basico_3.html">Integração HTML + CSS #3</a>
-  </li>
-  <li>
-    <a href="./html_css_basico_4.html">Integração HTML + CSS #4</a>
-  </li>
-  <li>
-    <a href="./html_css_basico_5.html">Integração HTML + CSS #5</a>
-  </li>
-  <li>
-    <a href="./efeito_cascata.html">Efeito Cascata</a>
-  </li>
-  <li>
-    <a href="./heranca.html">Herança no CSS</a>
-  </li>
-
-  <li>
-    <a href="./margem_combinada.html">Margin Collapse</a>
-  </li>
-  <li>
-    <a href="./propriedade_display_1.html">Propriedade Display #1</a>
-  </li>
-  <li>
-    <a href="./propriedade_display_2.html">Propriedade Display #2</a>
-  </li>
-  <li>
-    <a href="./seletores_1.html">Seletores CSS #1</a>
-  </li>
-  <li>
-    <a href="./seletores_2.html">Seletores CSS #2</a>
-  </li>
-  <li>
-    <a href="./seletores_3.html">Seletores CSS #3</a>
-  </li>
-</ul>
+      ul {
+        background-color: white;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      a {
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+      }
+      a:hover {
+        background-color: lightgray;
+      }
+      .navegacao > ul {
+        display: inline-block;
+        vertical-align: top;
+        width: 398px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Exercícios HTML & CSS</h1>
+    <div class="navegacao">
+      <ul>
+        <li>
+          <a href="./html_css_basico_1.html">Integração HTML + CSS #1</a>
+        </li>
+        <li>
+          <a href="./html_css_basico_2.html">Integração HTML + CSS #2</a>
+        </li>
+        <li>
+          <a href="./html_css_basico_3.html">Integração HTML + CSS #3</a>
+        </li>
+        <li>
+          <a href="./html_css_basico_4.html">Integração HTML + CSS #4</a>
+        </li>
+        <li>
+          <a href="./html_css_basico_5.html">Integração HTML + CSS #5</a>
+        </li>
+        <li>
+          <a href="./efeito_cascata.html">Efeito Cascata</a>
+        </li>
+        <li>
+          <a href="./heranca.html">Herança no CSS</a>
+        </li>
+        <li>
+          <a href="./margem_combinada.html">Margin Collapse</a>
+        </li>
+        <li>
+          <a href="./propriedade_display_1.html">Propriedade Display #1</a>
+        </li>
+        <li>
+          <a href="./propriedade_display_2.html">Propriedade Display #2</a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="./seletores_1.html">Seletores CSS #1</a>
+        </li>
+        <li>
+          <a href="./seletores_2.html">Seletores CSS #2</a>
+        </li>
+        <li>
+          <a href="./seletores_3.html">Seletores CSS #3</a>
+        </li>
+        <li>
+          <a href="./especificidade.html">Especificidade CSS</a>
+        </li>
+        <li>
+          <a href="./familia_fonte.html">Familia da Fonte</a>
+        </li>
+        <li>
+          <a href="./box_sizing.html">Box Sizing</a>
+        </li>
+        <li>
+          <a href="./cores_1.html">Cores #01</a>
+        </li>
+        <li>
+          <a href="./cores_2.html">Cores #02</a>
+        </li>
+        <li>
+          <a href="./cores_3.html">Cores #03</a>
+        </li>
+        <li>
+          <a href="./overflow.html">Overflow</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
