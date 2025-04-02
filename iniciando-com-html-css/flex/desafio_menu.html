@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <title>Desafio Menu</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background-color: #bbb;
+        font-family: "Oswald", sans-serif;
+      }
+
+      /* Estilo do header */
+      .cabecalho {
+        background-color: #333;
+        color: white;
+        border-bottom: 3px solid #06caca;
+        height: 80px;
+        padding: 0 10px;
+        font-size: 1.4rem;
+        font-weight: 200;
+        display: flex;
+        align-items: center;
+      }
+
+      .logo img {
+        height: 50px;
+      }
+
+      .menu {
+        flex-grow: 1;
+      }
+      .menu > ul {
+        list-style: none;
+        display: flex;
+      }
+
+      .menu a {
+        color: white;
+        text-decoration: none;
+        padding: 10x;
+        margin: 0 10px;
+      }
+
+      .menu a:hover {
+        background-color: #05aaaa;
+      }
+
+      .botao {
+        padding: 5px 30px;
+        background-color: black;
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+      }
+
+      .botao.destaque {
+        background-color: crimson;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="logo">
+        <a href="#inicio">
+          <img src="http://files.cod3r.com.br/curso-web/logo.png" alt="Logo" />
+        </a>
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+      <div class="botoes-autenticacao">
+        <a class="botao" href="#login">Entrar</a>
+        <a class="botao destaque" href="#cadastro">Cadastrar</a>
+      </div>
+    </header>
+  </body>
+</html>

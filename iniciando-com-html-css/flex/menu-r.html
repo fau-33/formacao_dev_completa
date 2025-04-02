@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <title>Menu</title>
+    <style>
+      * {
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: #bbb;
+        font-family: "Oswald", sans-serif;
+      }
+
+      /* Estilo do header */
+      .header {
+        display: flex;
+        align-items: center;
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        border-bottom: 3px solid #06caca;
+      }
+
+      /* Logo */
+      .logo {
+        display: flex;
+        align-items: center;
+      }
+
+      .logo img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+      }
+
+      .logo span {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+
+      /* Menu de navegação */
+      .header-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+      }
+
+      nav ul {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li {
+        margin-right: 15px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+        font-size: 1rem;
+      }
+
+      /* Botões */
+      .buttons {
+        margin-left: auto;
+        display: flex;
+        gap: 10px;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        padding: 5px 10px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+
+      .btn-primary {
+        background-color: #000;
+        color: white;
+      }
+
+      .btn-secondary {
+        background-color: crimson;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <!-- Container para agrupar logo e menu -->
+      <div class="header-container">
+        <!-- Logo -->
+        <div class="logo">
+          <img src="../images/logo.jpeg" alt="logo" />
+          <span>Cod3r</span>
+        </div>
+
+        <!-- Menu de navegação -->
+        <nav>
+          <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Cursos</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Botões -->
+      <div class="buttons">
+        <button class="btn-primary">Login</button>
+        <button class="btn-secondary">Cadastro</button>
+      </div>
+    </div>
+  </body>
+</html>
