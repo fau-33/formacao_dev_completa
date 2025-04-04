@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grid Areas</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background-color: black;
+        color: white;
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        grid-template-rows: 50px 1fr 50px;
+        grid-template-areas:
+          " cabecalho cabecalho"
+          " menu conteudo"
+          " rodape rodape";
+
+        column-gap: 5px;
+        row-gap: 5px;
+      }
+      body > * {
+        border: 3px solid cyan;
+      }
+      header {
+        border-color: crimson;
+        grid-area: cabecalho;
+      }
+
+      nav {
+        border-color: chartreuse;
+        grid-area: menu;
+      }
+      main {
+        grid-area: conteudo;
+      }
+      footer {
+        border-color: deeppink;
+        grid-area: rodape;
+      }
+    </style>
+  </head>
+  <body>
+    <header>Cabeçalho</header>
+    <nav>Menu</nav>
+    <main>Conteudo</main>
+    <footer>Rodapé</footer>
+  </body>
+</html>
