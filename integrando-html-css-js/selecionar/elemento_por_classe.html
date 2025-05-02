@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Integração HTML, CSS e JS</title>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <script defer src="../js/elemento_por_id_02.js"></script>
+  </head>
+  <body id="exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div id="segundo" class="destaque">#segundo</div>
+    <div id="terceiro">#terceiro</div>
+    <div id="quarto" class="destaque">#quarto</div>
+    <div id="quinto" class="ultimo">#quinto</div>
+
+    <script>
+      // HTMLCollection (não é um array)
+      const destaques = document.getElementsByClassName("destaque");
+      destaques[1].classList.remove("destaque");
+
+      const ultimos = document.getElementsByClassName("ultimo");
+      ultimos[0].classList.add("destaque");
+    </script>
+  </body>
+</html>

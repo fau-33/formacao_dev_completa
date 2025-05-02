@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Integração HTML, CSS e JS</title>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <script defer src="../js/elemento_por_id_02.js"></script>
+  </head>
+  <body id="exercicio">
+    <main class="coluna">
+      <p>Paragrafo #01</p>
+
+      <article>
+        <p>Paragrafo #02</p>
+      </article>
+
+      <p>Paragrafo #03</p>
+      <article>
+        <p>Paragrafo #04</p>
+      </article>
+      <article>
+        <p>Paragrafo #05</p>
+      </article>
+    </main>
+    <script>
+      // Os paragrafos que estao fora de <article>
+      // 1. Adicionar o texto [Fora] no inicio do conteudo do paragrafo
+      const paragrafosFora = document.querySelectorAll("p:not(article > p)");
+      paragrafosFora.forEach(
+        (no) => (no.textContent = `[Fora] ${no.textContent}`)
+      );
+      console.log(paragrafosFora);
+      // 2. Adicionem a classe 'destaque' dentro de <article>
+      const paragrafosDentro = document.querySelectorAll("article > p");
+      paragrafosDentro.forEach((no) => no.classList.add("destaque"));
+      console.log(paragrafosDentro);
+    </script>
+  </body>
+</html>

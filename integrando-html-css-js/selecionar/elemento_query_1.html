@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Integração HTML, CSS e JS</title>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <script defer src="../js/elemento_por_id_02.js"></script>
+  </head>
+  <body id="exercicio">
+    <div id="primeiro" class="primeiro">#primeiro</div>
+    <div id="segundo" class="destaque" destaque="1">#segundo</div>
+    <div id="terceiro" metade>#terceiro</div>
+    <div id="quarto" class="destaque" destaque="2">#quarto</div>
+    <div id="quinto" class="ultimo">#quinto</div>
+
+    <script>
+      function selecionarPorUm(seletor) {
+        const elemento = document.querySelector(seletor);
+        console.log(elemento);
+      }
+      // document.querySelector
+
+      selecionarPorUm("#primeiro"); // Por ID
+      selecionarPorUm(".destaque"); // Por Classe
+      selecionarPorUm(".ultimo"); // Por Classe
+      selecionarPorUm(".primeiro"); // Por Classe
+      selecionarPorUm("[metade]"); // Por Atributo
+      selecionarPorUm('[destaque="2"]'); // Por Atributo
+
+      // const primeiro = document.querySelector("#primeiro");
+      // console.log(primeiro);
+    </script>
+  </body>
+</html>

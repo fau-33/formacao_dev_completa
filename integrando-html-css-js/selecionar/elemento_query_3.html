@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Integração HTML, CSS e JS</title>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <script defer src="../js/elemento_por_id_02.js"></script>
+  </head>
+  <body id="exercicio">
+    <main>
+      <section>
+        <p>Lista de aprovados...</p>
+        <ul>
+          <li>Ana</li>
+          <li>Rafael</li>
+          <li>Gustavo</li>
+          <li>Pedro</li>
+        </ul>
+        <p>Lista de reprovados...</p>
+        <ul>
+          <li>Alex</li>
+          <li>Carlos</li>
+          <li>Davi</li>
+        </ul>
+      </section>
+    </main>
+    <script>
+      const primeiros = document.querySelectorAll(
+        "main > section li:first-child"
+      );
+      primeiros.forEach((no) => (no.textContent = `>>> ${no.textContent} <<<`));
+
+      const itens = document.querySelectorAll("main > section li");
+      const ultimoItem = itens[itens.length - 1];
+      const listaDeReprovados = ultimoItem.parentNode;
+      const primeiroItem = listaDeReprovados.firstElementChild;
+
+      console.log(ultimoItem.parentNode.childNodes);
+      console.log(listaDeReprovados.firstElementChild);
+      console.log(listaDeReprovados.lastElementChild);
+
+      console.log(primeiroItem.nextSibling);
+      console.log(primeiroItem.nextElementSibling);
+    </script>
+  </body>
+</html>
