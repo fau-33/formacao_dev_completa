@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Integração HTML, CSS e JS</title>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <script defer src="../js/elemento_por_id_02.js"></script>
+  </head>
+  <body id="exercicio">
+    <div>
+      <p>Texto Inicial</p>
+    </div>
+    <script>
+      const div = document.querySelector("div");
+      div.innerHTML = "<p>Texto Alterado</p>";
+      // div.outerHTML = "<p>Texto Alterado</p>";
+
+      div.insertAdjacentHTML("beforebegin", "<p>Antes do inicio</p>");
+      div.insertAdjacentHTML("afterbegin", "<p>Depois do inicio</p>");
+      div.insertAdjacentHTML("beforeend", "<p>Antes do fim</p>");
+      div.insertAdjacentHTML("afterend", "<p>Depois do fim</p>");
+
+      console.log(div.innerHTML);
+      console.log(div.innerText);
+    </script>
+  </body>
+</html>

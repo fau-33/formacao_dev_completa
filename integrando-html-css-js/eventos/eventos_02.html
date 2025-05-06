@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Integração HTML, CSS e JS</title>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <script defer src="../js/elemento_por_id_02.js"></script>
+  </head>
+  <body id="exercicio">
+    <div>
+      <a esperar="6" href="http://www.google.com">Google</a>
+    </div>
+    <div>
+      <a esperar="3" href="http://www.yahoo.com.br">Yahoo</a>
+    </div>
+    <script>
+      function navegarComEsperar(evento) {
+        evento.preventDefault();
+        const link = evento.target;
+        const segundos = +link.getAttribute("esperar");
+
+        setTimeout(() => {
+          window.location.href = link.href;
+        }, segundos * 1000);
+      }
+
+      const linksParaEsperar = document.querySelectorAll("a[esperar]");
+      linksParaEsperar.forEach((link) => (link.onclick = navegarComEsperar));
+    </script>
+  </body>
+</html>

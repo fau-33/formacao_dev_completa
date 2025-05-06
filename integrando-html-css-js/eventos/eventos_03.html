@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Integração HTML, CSS e JS</title>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <script defer src="../js/elemento_por_id_02.js"></script>
+  </head>
+  <body id="exercicio">
+    <div style="user-select: none">Elemento</div>
+    <script>
+      const div = document.querySelector("div");
+      div.style.position = "absolute";
+
+      div.onmousemove = function (e) {
+        const item = e.target;
+        item.style.cursor = "move";
+
+        if (e.buttons) {
+          item.style.top = e.clientY - item.clientHeight / 2;
+          item.style.left = e.clientX - item.clientWidth / 2;
+        }
+      };
+    </script>
+  </body>
+</html>

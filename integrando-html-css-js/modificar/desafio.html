@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Integração HTML, CSS e JS</title>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <script defer src="../js/elemento_por_id_02.js"></script>
+  </head>
+  <body id="exercicio">
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Nota</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <script>
+      // Criar uma parte da tabela no html e a outra no javascript incluindo os alunos e notas dentro da tabela
+      const alunos = [
+        { nome: "Joaquim", nota: 7.3 },
+        { nome: "Maria", nota: 9.2 },
+        { nome: "Pedro", nota: 9.8 },
+        { nome: "Ana", nota: 8.7 },
+      ];
+
+      const corpoTabela = document.querySelector("table tbody");
+      alunos.forEach((aluno) => {
+        corpoTabela.innerHTML += `
+          <tr>
+            <td>${aluno.nome}</td>
+            <td>${aluno.nota}</td>
+          </tr>
+        `;
+      });
+    </script>
+  </body>
+</html>

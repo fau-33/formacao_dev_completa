@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Integração HTML, CSS e JS</title>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <script defer src="../js/elemento_por_id_02.js"></script>
+  </head>
+  <body id="exercicio">
+    <div>classes</div>
+    <script>
+      const div = document.querySelector("div");
+      const classes = div.classList;
+
+      classes.add("destaque");
+      classes.remove("destaque");
+      classes.toggle("destaque");
+      // classes.toggle("destaque");
+
+      console.log(classes.contains("destaque"));
+      console.log(classes.length);
+
+      classes.add("destaque1");
+      classes.add("destaque2");
+      console.log(classes.length);
+
+      for (let classe of classes) {
+        console.log(classe);
+      }
+
+      classes.forEach((classe) => console.log("ForEach", classe));
+      console.log([...classes]);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Integração HTML, CSS e JS</title>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <script defer src="../js/elemento_por_id_02.js"></script>
+  </head>
+  <body id="exercicio">
+    <main class="coluna">
+      <h1>Formulário</h1>
+      <form class="coluna">
+        <input
+          type="text"
+          name="q"
+          placeholder="Digite o termo para pesquisar......"
+        />
+        <select name="hl">
+          <option value="pt-BR">Português (Brasil)</option>
+          <option value="en-US">Inglês (EUA)</option>
+        </select>
+        <button web-submit>Pesquisar</button>
+      </form>
+    </main>
+    <script>
+      function submit(event) {
+        event.preventDefault();
+        const formulario = event.target;
+        const dados = new FormData(formulario);
+        dados.append("seguro", true);
+        console.log(dados.get("q"));
+        console.log(dados.has("hl"));
+        console.log(dados.has("seguro"));
+
+        for (let dado of dados) {
+          console.log(dado);
+        }
+        window.location.href = `https://google.com/search?q=${dados.get(
+          "q"
+        )}&hl=${dados.get("hl")}`;
+      }
+
+      // const botoes = document.querySelectorAll("[web-submit]");
+      // botoes.forEach((el) => (el.onclick = submit));
+
+      const formulario = document.forms[0];
+      formulario.onsubmit = submit;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Integração HTML, CSS e JS</title>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <script defer src="../js/elemento_por_id_02.js"></script>
+  </head>
+  <body id="exercicio">
+    <div>
+      <a href="https://www.cod3r.com.br" target="_blank">Cod3r</a>
+    </div>
+    <div class="logo">
+      <!-- Substituí a tag <a> por <img> -->
+      <img
+        src="https://files.cod3r.com.br/curso-web/logo-estreita.png"
+        alt="Logo Cod3r"
+      />
+    </div>
+    <script>
+      // Agora o elemento img existe
+      const img = document.querySelector("img");
+      console.log("src #01", img.getAttribute("src")); // URL relativo
+      console.log("src #02", img.src); // URL absoluto
+      console.log("src #03", img["src"]); // Mesmo que img.src
+      console.log("alt", img.alt); // "Logo Cod3r"
+
+      console.log(img instanceof Node); // true
+      console.log("nodeType", img.nodeType); // 1 (ELEMENT_NODE)
+      console.log("nodeName", img.nodeName); // "IMG"
+
+      const link = document.querySelector("a");
+      console.log("href", link.href);
+      console.log("texto", link.firstChild.nodeType); // 3 (TEXT_NODE)
+      link.firstChild.nodeValue = "Site da Cod3r";
+      link.innerHTML = "Novo Site da Cod3r";
+    </script>
+  </body>
+</html>

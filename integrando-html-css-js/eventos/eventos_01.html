@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Integração HTML, CSS e JS</title>
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <script defer src="../js/elemento_por_id_02.js"></script>
+  </head>
+  <body id="exercicio">
+    <main class="coluna">
+      <div id="resultado" onclick="limpar()" style="cursor: pointer">-</div>
+      <button onclick="sim()">Sim</button>
+      <button onclick="nao()">Não</button>
+      <script>
+        const div = document.querySelector("#resultado");
+        function limpar() {
+          div.innerHTML = "-";
+        }
+        function sim() {
+          div.innerHTML = "Sim";
+        }
+
+        function nao() {
+          div.innerHTML = "Não";
+        }
+      </script>
+    </main>
+  </body>
+</html>
