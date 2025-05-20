@@ -1,4 +1,4 @@
-module.exports = (ingredientes, acoes1, acoes2) => {
+const receita = (ingredientes, acoes1, acoes2) => {
 	let retorno = "";
 	for (const ingrediente of ingredientes) {
 		retorno += `${acoes1(ingrediente)}\n`;
@@ -7,3 +7,5 @@ module.exports = (ingredientes, acoes1, acoes2) => {
 	retorno += "pronto";
 	return retorno;
 };
+
+export default receita;

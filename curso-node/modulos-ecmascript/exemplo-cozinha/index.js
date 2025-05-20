@@ -1,19 +1,15 @@
-// index.js
+// import cozinha from "./cozinha1/principal.js";
+// console.log(cozinha);
 
-// Importando o módulo principal da cozinha
-import cozinha from "./cozinha/principal.js";
+// import receita from "./receita.js";
+// const r = receita(["carne", "feijão"], cozinha.cortar, cozinha.assar);
+// console.log(r);
 
-// Importando as ações de cozinhar
-import acoesCozinhar from "./acoesCozinhar.js";
+import refeicao from "./refeicao.js";
+// console.log(refeicao);
 
-// Importando os alimentos
-import { alimentos } from "./alimentos.js";
+const vouComerNoAlmoco = refeicao("almoco");
+const vouComerNoJantar = refeicao("jantar");
 
-// Exibindo as funcionalidades importadas
-console.log("Módulo Cozinha:", cozinha);
-console.log("Ações de Cozinhar:", acoesCozinhar);
-console.log("Alimentos Disponíveis:", alimentos);
-
-// Testando algumas funcionalidades
-console.log(cozinha.cozinhar(alimentos[0])); // Exemplo: "cozinhando feijão"
-console.log(cozinha.servir(alimentos[1])); // Exemplo: "servindo arroz"
+vouComerNoAlmoco("feijão", "arroz", "carne");
+vouComerNoJantar("feijão", "arroz", "frango");
