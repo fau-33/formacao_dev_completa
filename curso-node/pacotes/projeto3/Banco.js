@@ -1,9 +1,7 @@
 import fs from "node:fs";
-let dadosManipulaveis = _carregarValores(); // formato {nome, id}
-const ultimoIdResgitrado =
-	dadosManipulaveis[dadosManipulaveis.length - 1]?.id ?? -1;
+import { v4 as uuidv4 } from "uuid";
 
-let idGlobal = ultimoIdResgitrado + 1;
+let dadosManipulaveis = _carregarValores(); // formato {nome, id}
 
 function _carregarValores() {
 	const dadosJson = fs.readFileSync("banco.json", "utf8");
@@ -21,8 +19,8 @@ export function salvar(nome, id) {
 	if (indice >= 0) {
 		dadosManipulaveis[indice].nome = nome;
 	} else {
-		dadosManipulaveis.push({ nome, id: idGlobal });
-		idGlobal++;
+		const idUnico = uuidv4();
+		dadosManipulaveis.push({ nome, id: idUnico });
 	}
 }
 export function deletar(id) {
