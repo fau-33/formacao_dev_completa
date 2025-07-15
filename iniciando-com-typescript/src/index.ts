@@ -1,3 +1,4 @@
-const x: number = 10;
-
-console.log(`Hello world ${x + 200}`);
+// import "./tipos/variaveis";
+// import "./tipos/array";
+// import "./tipos/enums";
+import "./tipos/enums_const";
