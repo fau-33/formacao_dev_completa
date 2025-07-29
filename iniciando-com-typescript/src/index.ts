@@ -18,4 +18,7 @@
 // import "./oo/desafio_estatico";
 // import "./interfaces/usuario";
 // import "./interfaces/flexivel";
-import "./interfaces/funcao";
+// import "./interfaces/funcao";
+// import "./pilares_oo/encapsulamento";
+// import "./pilares_oo/heranca_1";
+import "./pilares_oo/heranca_2";
