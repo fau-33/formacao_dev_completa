@@ -2,6 +2,7 @@ import Cabecalho from "@/components/Cabecalho";
 import "../app/globals.css";
 import Conteudo from "@/components/Conteudo";
 import Rodape from "@/components/Rodape";
+import Menu from "@/components/Menu";
 
 export default function Pagina() {
   const ano = new Date().getFullYear();
@@ -14,9 +15,12 @@ export default function Pagina() {
     `}
     >
       <Cabecalho titulo="Minha Página" subtitulo="Estou na pasta pages!" />
-      <Conteudo>
-        <button className="bg-blue-500 p-2 rounded-md">Clique aqui</button>
-      </Conteudo>
+      <div className="flex flex-1 gap-5">
+        <Menu />
+        <Conteudo>
+          <button className="bg-blue-500 p-2 rounded-md">Clique aqui</button>
+        </Conteudo>
+      </div>
       <Rodape
         textoLeft="Feito com ❤ por Flávio Félix Formação.DEV"
         textoRight={`Todos os direitos reservados ${ano}`}
