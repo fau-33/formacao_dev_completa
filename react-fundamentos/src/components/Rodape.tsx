@@ -6,8 +6,8 @@ export default function Rodape(props: RodapeProps) {
   return (
     <div
       className={`
-      flex justify-between items-center h-16
-      rounded-lg bg-cyan-600 text-xl px-10
+      flex justify-between items-center h-16 text-base
+       border-t border-zinc-800 bg-zinc-900 text-zinc-500 px-10
       
     `}
     >
