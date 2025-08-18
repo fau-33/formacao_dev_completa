@@ -1,9 +1,12 @@
-export default function Conteudo(props: any) {
-  console.log(props);
+interface ConteudoProps {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  children: any;
+}
+export default function Conteudo(props: ConteudoProps) {
   return (
     <div
       className={`
-      flex justify-center items-center flex-1
+      flex items-start flex-1 p-4
       rounded-lg bg-emerald-500 text-3xl
     `}
     >

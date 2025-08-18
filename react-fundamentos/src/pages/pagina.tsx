@@ -1,30 +1,15 @@
-import Cabecalho from "@/components/Cabecalho";
 import "../app/globals.css";
-import Conteudo from "@/components/Conteudo";
-import Rodape from "@/components/Rodape";
-import Menu from "@/components/Menu";
+import Pagina from "@/components/Pagina";
 
-export default function Pagina() {
-  const ano = new Date().getFullYear();
+export default function TestePagina() {
+  function executar() {
+    console.log("Executando...");
+  }
   return (
-    <div
-      className={`
-      flex flex-col h-screen
-      p-5 gap-5
-      bg-black text-white
-    `}
-    >
-      <Cabecalho titulo="Minha Página" subtitulo="Estou na pasta pages!" />
-      <div className="flex flex-1 gap-5">
-        <Menu />
-        <Conteudo>
-          <button className="bg-blue-500 p-2 rounded-md">Clique aqui</button>
-        </Conteudo>
-      </div>
-      <Rodape
-        textoLeft="Feito com ❤ por Flávio Félix Formação.DEV"
-        textoRight={`Todos os direitos reservados ${ano}`}
-      />
-    </div>
+    <Pagina titulo="Minha Aplicação" subtitulo="Melhor app da web!">
+      <button onClick={executar} className="bg-blue-500 p-2 rounded-md">
+        Clique aqui
+      </button>
+    </Pagina>
   );
 }

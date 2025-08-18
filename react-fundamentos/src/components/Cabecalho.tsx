@@ -1,8 +1,13 @@
-export default function Cabecalho(props: any) {
+interface CabecalhoProps {
+  titulo: string;
+  subtitulo: string;
+  className?: string;
+}
+export default function Cabecalho(props: CabecalhoProps) {
   return (
     <div
       className={`
-      flex flex-col justify-center items-center  h-36
+      flex flex-col justify-center items-center ${props.className ?? ""}
       bg-purple-500  rounded-b-lg
     `}
     >
