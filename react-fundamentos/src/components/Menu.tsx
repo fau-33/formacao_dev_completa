@@ -6,6 +6,7 @@ import {
   IconFunction,
   IconH1,
   IconHome,
+  IconNumber,
   IconSitemap,
 } from "@tabler/icons-react";
 import MenuItem from "./MenuItem";
@@ -19,7 +20,21 @@ export default function Menu() {
     `}
     >
       <span className="text-sm text-zinc-500  pl-3 pt-4">Estados</span>
-      <MenuItem icone={<IconCode />} texto="Componente sem estado" url="/" />
+      <MenuItem
+        icone={<IconCode />}
+        texto="Componente sem estado"
+        url="/estado/sem"
+      />
+      <MenuItem
+        icone={<IconCode />}
+        texto="Componente com estado"
+        url="/estado/com"
+      />
+      <MenuItem
+        icone={<IconNumber />}
+        texto="Contador"
+        url="/estado/contador"
+      />
 
       <span className="text-sm text-zinc-500  pl-3 pt-4">Fundamentos</span>
       <MenuItem

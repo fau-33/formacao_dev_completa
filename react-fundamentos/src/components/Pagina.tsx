@@ -3,8 +3,14 @@ import Conteudo from "@/components/Conteudo";
 import Rodape from "@/components/Rodape";
 import Arealateral from "./Arealateral";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default function Pagina(props: any) {
+interface PaginaProps {
+  titulo: string;
+  subtitulo: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  children: any;
+}
+
+export default function Pagina(props: PaginaProps) {
   const ano = new Date().getFullYear();
   return (
     <div className="flex  h-screen">

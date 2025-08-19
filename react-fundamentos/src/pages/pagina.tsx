@@ -7,7 +7,7 @@ export default function TestePagina() {
   }
   return (
     <Pagina titulo="Minha Aplicação" subtitulo="Melhor app da web!">
-      <button onClick={executar} className="bg-blue-500 p-2 rounded-md">
+      <button onClick={executar} className="botao">
         Clique aqui
       </button>
     </Pagina>
