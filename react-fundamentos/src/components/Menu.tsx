@@ -1,8 +1,12 @@
 import {
+  IconArrowDownSquare,
+  IconArrowUpSquare,
   IconBraces,
   IconBrandJavascript,
+  IconCalculator,
   IconCode,
   IconFileCheck,
+  IconForms,
   IconFunction,
   IconH1,
   IconHome,
@@ -19,6 +23,17 @@ export default function Menu() {
       text-3xl p-2 gap-2
     `}
     >
+      <span className="text-sm text-zinc-500  pl-3 pt-4">Comunicação</span>
+      <MenuItem
+        icone={<IconArrowDownSquare />}
+        texto="Comunicação Direta"
+        url="/comunicacao/direta"
+      />
+      <MenuItem
+        icone={<IconArrowUpSquare />}
+        texto="Comunicação Indireta"
+        url="/comunicacao/indireta"
+      />
       <span className="text-sm text-zinc-500  pl-3 pt-4">Estados</span>
       <MenuItem
         icone={<IconCode />}
@@ -34,6 +49,16 @@ export default function Menu() {
         icone={<IconNumber />}
         texto="Contador"
         url="/estado/contador"
+      />
+      <MenuItem
+        icone={<IconForms />}
+        texto="Campo de Texto"
+        url="/estado/campoTexto"
+      />
+      <MenuItem
+        icone={<IconCalculator />}
+        texto="Calculadora"
+        url="/estado/calculadora"
       />
 
       <span className="text-sm text-zinc-500  pl-3 pt-4">Fundamentos</span>
