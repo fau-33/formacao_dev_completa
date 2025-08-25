@@ -1,7 +1,14 @@
+import Pagina from "@/components/template/Pagina";
+import Titulo from "@/components/template/Titulo";
+
 export default function Home() {
   return (
-    <div className="flex justify-center h-screen items-center text-7xl">
-      Página Inicial
-    </div>
+    <Pagina>
+      <Titulo
+        principal="Home"
+        secundario="Curso de Reactjs com Tailwind"
+        gradiente
+      />
+    </Pagina>
   );
 }
