@@ -1,3 +1,4 @@
+import Logo from "./Logo";
 import Menu from "./Menu";
 import UsuarioInfo from "./UsuarioInfo";
 
@@ -15,10 +16,13 @@ export default function Pagina(props: PaginaProps) {
   };
   return (
     <div className="flex h-screen">
-      <aside className="  flex flex-col bg-zinc-900 w-72">
-        <Menu className="p-7" />
-        <hr className="mx-7 border-zinc-700" />
-        <UsuarioInfo {...usuario} className="p-7" />
+      <aside className="  flex flex-col bg-zinc-200 dark:bg-zinc-900 w-80">
+        <Logo className="pt-7 px-7" />
+        <Menu className="pt-3.5 px-7 pb-28 overflow-auto w-80" />
+        <div className="fixed bottom-0 bg-zinc-900">
+          <hr className="mx-7 border-zinc-700" />
+          <UsuarioInfo {...usuario} className="p-7" />
+        </div>
       </aside>
       <div className="p-7">{props.children}</div>
     </div>
