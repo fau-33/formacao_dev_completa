@@ -1,4 +1,10 @@
-import { IconNumbers, IconUsers } from "@tabler/icons-react";
+import {
+  IconArrowsLeftRight,
+  IconLetterCase,
+  IconMathGreater,
+  IconNumbers,
+  IconUsers,
+} from "@tabler/icons-react";
 import { MenuItem } from "../../data/models/MenuItem";
 import { MenuSecao } from "../../data/models/MenuSecao";
 import Logo from "./Logo";
@@ -23,6 +29,24 @@ export default function MenuPrincipal() {
           url: "/essenciais/votacao",
           tag: "useState",
           icone: <IconUsers />,
+        },
+        {
+          titulo: "Consulta API",
+          url: "/essenciais/consultaAPI",
+          tag: "useEffect",
+          icone: <IconArrowsLeftRight />,
+        },
+        {
+          titulo: "Maior",
+          url: "/essenciais/maior",
+          tag: "useEffect",
+          icone: <IconMathGreater />,
+        },
+        {
+          titulo: "Contagem de Caracteres",
+          url: "/essenciais/contagemCaracteresEffect",
+          tag: "useEffect",
+          icone: <IconLetterCase />,
         },
       ],
     },
