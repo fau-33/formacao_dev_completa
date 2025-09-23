@@ -1,6 +1,7 @@
 import {
   IconAppWindow,
   IconArrowsLeftRight,
+  IconDimensions,
   IconLetterCase,
   IconMathGreater,
   IconNumbers,
@@ -78,8 +79,14 @@ export default function MenuPrincipal() {
         {
           titulo: "Modal",
           url: "/personalizados/modal",
-          tag: "useModal",
+          tag: "personalizados",
           icone: <IconAppWindow />,
+        },
+        {
+          titulo: "Tamanho da Janela",
+          url: "/personalizados/tamanhoJanela",
+          tag: "personalizados",
+          icone: <IconDimensions />,
         },
       ],
     },
