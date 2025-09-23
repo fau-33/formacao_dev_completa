@@ -1,8 +1,11 @@
 import {
+  IconAppWindow,
   IconArrowsLeftRight,
   IconLetterCase,
   IconMathGreater,
   IconNumbers,
+  IconRefreshAlert,
+  IconSection,
   IconUsers,
 } from "@tabler/icons-react";
 import { MenuItem } from "../../data/models/MenuItem";
@@ -16,7 +19,7 @@ export default function MenuPrincipal() {
   const secoes = [
     {
       titulo: "Essenciais",
-      aberta: true,
+      aberta: false,
       itens: [
         {
           titulo: "Contador",
@@ -47,6 +50,36 @@ export default function MenuPrincipal() {
           url: "/essenciais/contagemCaracteresEffect",
           tag: "useEffect",
           icone: <IconLetterCase />,
+        },
+        {
+          titulo: "State vs Referência",
+          url: "/essenciais/stateVsRef",
+          tag: "useRef",
+          icone: <IconRefreshAlert />,
+        },
+        {
+          titulo: "Referência ao Elemento",
+          url: "/essenciais/refElemento",
+          tag: "useRef",
+          icone: <IconSection />,
+        },
+        {
+          titulo: "Contagem de caracteres ref",
+          url: "/essenciais/contagemCaracteresRef",
+          tag: "useRef",
+          icone: <IconLetterCase />,
+        },
+      ],
+    },
+    {
+      titulo: "Personalizados",
+      aberta: true,
+      itens: [
+        {
+          titulo: "Modal",
+          url: "/personalizados/modal",
+          tag: "useModal",
+          icone: <IconAppWindow />,
         },
       ],
     },
