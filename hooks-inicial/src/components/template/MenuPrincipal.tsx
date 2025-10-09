@@ -8,6 +8,7 @@ import {
   IconRefreshAlert,
   IconSection,
   IconUsers,
+  IconLock,
 } from "@tabler/icons-react";
 import { MenuItem } from "../../data/models/MenuItem";
 import { MenuSecao } from "../../data/models/MenuSecao";
@@ -87,6 +88,12 @@ export default function MenuPrincipal() {
           url: "/personalizados/tamanhoJanela",
           tag: "personalizados",
           icone: <IconDimensions />,
+        },
+        {
+          titulo: "Validando senha",
+          url: "/personalizados/senha",
+          tag: "personalizados",
+          icone: <IconLock />,
         },
       ],
     },
