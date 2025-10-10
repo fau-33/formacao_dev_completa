@@ -21,6 +21,7 @@ import Flex from "./Flex";
 import useTamanhoJanela from "@/data/hooks/useTamanhoJanela";
 import { useEffect } from "react";
 import useBoolean from "@/data/hooks/useBoolean";
+import { IconShoppingCart } from "@tabler/icons";
 
 export default function MenuPrincipal() {
   const secoes = [
@@ -99,6 +100,18 @@ export default function MenuPrincipal() {
           url: "/personalizados/senha",
           tag: "personalizados",
           icone: <IconLock />,
+        },
+      ],
+    },
+    {
+      titulo: "Contexto",
+      aberta: true,
+      itens: [
+        {
+          titulo: "Loja",
+          url: "/contexto/loja",
+          tag: "useContext",
+          icone: <IconShoppingCart />,
         },
       ],
     },
