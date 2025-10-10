@@ -9,7 +9,11 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "module": "esnext",
-    "moduleResolution": "bundler",
+
+    // CORREÇÃO: Mudado de "bundler" para "node" para resolver o conflito de tipagem
+    // com bibliotecas mais antigas ou que não usam totalmente o "exports" do package.json.
+    "moduleResolution": "node",
+
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
