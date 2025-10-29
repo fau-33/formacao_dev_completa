@@ -10,6 +10,7 @@ import {
   IconUsers,
   IconLock,
   IconShoppingCart,
+  IconPin,
 } from "@tabler/icons-react";
 
 export const secoes = [
@@ -69,7 +70,7 @@ export const secoes = [
   },
   {
     titulo: "Personalizados",
-    aberta: true,
+    aberta: false,
     itens: [
       {
         titulo: "Modal",
@@ -93,13 +94,25 @@ export const secoes = [
   },
   {
     titulo: "Contexto",
-    aberta: true,
+    aberta: false,
     itens: [
       {
         titulo: "Loja",
         url: "/contexto/loja",
         tag: "useContext",
         icone: <IconShoppingCart />,
+      },
+    ],
+  },
+  {
+    titulo: "Outros",
+    aberta: true,
+    itens: [
+      {
+        titulo: "Memorizando um elemento",
+        url: "/outros/memorizacao",
+        tag: "useMemo",
+        icone: <IconPin />,
       },
     ],
   },
