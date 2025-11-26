@@ -39,7 +39,7 @@ export class Utils {
     return array.find((elemento: any) => elemento.id === id);
   }
 
-  static inverterObjeto(objeto: any): any {
+  static inverterObjeto(objeto: object): any {
     return Object.entries(objeto).reduce((novoObjeto, [chave, valor]) => {
       if (typeof valor === "object") {
         novoObjeto[JSON.stringify(valor) as string] = chave;
