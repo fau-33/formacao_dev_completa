@@ -11,6 +11,11 @@ import {
   IconLock,
   IconShoppingCart,
   IconPin,
+  IconForms,
+  IconTextColor,
+  IconColorSwatch,
+  IconDatabase,
+  IconDatabaseImport,
 } from "@tabler/icons-react";
 
 export const secoes = [
@@ -113,6 +118,42 @@ export const secoes = [
         url: "/outros/memorizacao",
         tag: "useMemo",
         icone: <IconPin />,
+      },
+      {
+        titulo: "Memorizando uma função",
+        url: "/outros/memorizandoFuncoes",
+        tag: "useCallback",
+        icone: <IconPin />,
+      },
+      {
+        titulo: "Formulário 1",
+        url: "/outros/formularioImperativeHandle",
+        tag: "useImperativeHandle",
+        icone: <IconForms />,
+      },
+      {
+        titulo: "Texto",
+        url: "/outros/texto",
+        tag: "useLayoutEffect",
+        icone: <IconTextColor />,
+      },
+      {
+        titulo: "Gerador de cor",
+        url: "/outros/geradorDeCor",
+        tag: "useLayoutEffect",
+        icone: <IconColorSwatch />,
+      },
+      {
+        titulo: "Soma com useState",
+        url: "/outros/somaState",
+        tag: "useState",
+        icone: <IconDatabase />,
+      },
+      {
+        titulo: "Soma com useReducer",
+        url: "/outros/somaReducer",
+        tag: "useReducer",
+        icone: <IconDatabaseImport />,
       },
     ],
   },
