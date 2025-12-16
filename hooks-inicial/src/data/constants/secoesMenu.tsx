@@ -155,6 +155,18 @@ export const secoes = [
         tag: "useReducer",
         icone: <IconDatabaseImport />,
       },
+      {
+        titulo: "Formulario 1",
+        url: "/outros/formularioId1",
+        tag: "useId",
+        icone: <IconForms />,
+      },
+      {
+        titulo: "Formulario 2",
+        url: "/outros/formularioId2",
+        tag: "useId",
+        icone: <IconForms />,
+      },
     ],
   },
 ];

@@ -3,13 +3,35 @@ import Botao from "@/components/template/Botao";
 import Display from "@/components/template/Display";
 import Flex from "@/components/template/Flex";
 import Pagina from "@/components/template/Pagina";
-import { useState, useEffect, useReducer, Reducer } from "react";
+import { useReducer, Reducer } from "react";
 
 function mudaDados(estadoAtual: any, acao: any) {
   switch (acao.type) {
     case "ALTERA_N1":
-      window.alert("Alterando N1");
-      return { ...estadoAtual };
+      return {
+        ...estadoAtual,
+        n1: acao.novoValor,
+        validadeN1: acao.novoValor > 0,
+      };
+    case "ALTERA_N2":
+      return {
+        ...estadoAtual,
+        n2: acao.novoValor,
+        validadeN2: acao.novoValor > 0,
+      };
+    case "SOMA":
+      if (estadoAtual.validadeN1 && estadoAtual.validadeN2) {
+        let soma: number = estadoAtual.n1 + estadoAtual.n2;
+        return {
+          ...estadoAtual,
+          soma,
+        };
+      } else {
+        return {
+          ...estadoAtual,
+          soma: -9999,
+        };
+      }
   }
 }
 
@@ -22,36 +44,6 @@ export default function () {
     soma: 0,
   });
 
-  const [n1, setN1] = useState(0);
-  const [n2, setN2] = useState(0);
-  const [validadeN1, setValidadeN1] = useState(false);
-  const [validadeN2, setValidadeN2] = useState(false);
-  const [soma, setSoma] = useState(0);
-
-  // 2 - Linkar os estados com os inputs
-  const handleInput1 = (e: any) => {
-    setN1(+e.target.value);
-  };
-
-  const handleInput2 = (e: any) => {
-    setN2(+e.target.value);
-  };
-
-  // 3 - Monitorar as validades dos numeros. O numero sera valido se for > 0
-  useEffect(() => {
-    setValidadeN1(n1 > 0);
-    setValidadeN2(n2 > 0);
-  }, [n1, n2]);
-
-  // 4 - Fazer a soma clicando no botao se os numeros forem validos. -999
-  const handleSomaClick = () => {
-    if (validadeN1 && validadeN2) {
-      setSoma(n1 + n2);
-    } else {
-      setSoma(-999);
-    }
-  };
-
   return (
     <Pagina titulo="Soma com useState" subtitulo="Exemplo de soma com useState">
       <Flex col centerCross>
@@ -60,18 +52,22 @@ export default function () {
           <InputFormatado
             tipo="number"
             valor={dados.n1}
-            onInput={handleInput1}
+            onInput={(e) =>
+              dispatchDados({ type: "ALTERA_N1", novoValor: +e.target.value })
+            }
           ></InputFormatado>
           <span className="text-4xl ml-2">+</span>
           <InputFormatado
             tipo="number"
             valor={dados.n2}
-            onInput={() => dispatchDados({ type: "ALTERA_N1" })}
+            onInput={(e) =>
+              dispatchDados({ type: "ALTERA_N2", novoValor: +e.target.value })
+            }
           ></InputFormatado>
           <Botao
             cor="bg-orange-400"
             texto="="
-            onClick={handleSomaClick}
+            onClick={() => dispatchDados({ type: "SOMA" })}
           ></Botao>
         </Flex>
         <Display texto={dados.soma} />
